@@ -17,7 +17,7 @@ output: process.stdout
 // If the word does not start with a vowel but has a vowel in the middle
 // split the word into 2 parts
 // Part1: all the letters before the vowel
-// Part2: a;; the letters starting at the vowel
+// Part2: all the letters starting at the vowel
 // then swap those 2 parts, and add 'ay' to the end 
 // If the word does not have a vowel, ad "ay" to the end 
 
