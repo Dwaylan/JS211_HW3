@@ -25,8 +25,14 @@ output: process.stdout
 // you can use 'aeiou'.includes(letter)
 
 const pigLatin = (word) => {
+// The function is "pigLatin"
+// "word" is the name of the argument passed
 
-  // Your code here
+word= word.toLowerCase().trim()
+// "toLowerCase" takes a word in as an arguement and makes all letters lowercase
+// "trim" take in the word that was passed through "toLowerCase" and removes the
+// spaces between the letters of said word
+// notice the use of dot notation
 
 }
 
