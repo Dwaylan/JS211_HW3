@@ -34,6 +34,32 @@ word= word.toLowerCase().trim()
 // spaces between the letters of said word
 // notice the use of dot notation
 
+let initialVowel = word.match(/aeiou/);
+// The match() method searches a string for a match against a regular expression,
+//  and returns the matches, as an Array object.
+// "initial vowel" takes "word" and uses "match" and passes vowels in the 
+// arguement to locate a a vowel
+// So far our 1.) Our first funtion "pigLatin" takes in "word" as an argument
+// 2.) "word" is converted to lowercase and the white space between the letters is trimmed
+// 3.) our "initialVowel" takes the converted lowercase word and searches for a vowel
+
+let placement = word.indexOf(initialVowel);
+// The indexOf() method returns the position of the first occurrence of a specified value in a string.
+// so by passing "initialVowel" as the arguement we are looking for the index of the
+// first vowel aka "aeiou"
+
+// If else statements
+if(placement > 0) {
+    return word.slice(placement) + word.slice(0, placement) + 'ay';
+// ** The slice() method returns the selected elements in an array, as a new array object.**
+// if the initial placement of the vowel in a word has an index greater than 0,
+// return the word BUT sliced placement  at the beginning and "ay" at the 
+// end
+}else if(initialVowel== null){
+    return word + 'ay'
+}else if(initialVowel !== null){
+return word + 'yay'
+}
 }
 
 // the first function called in the program to get an input from the user
