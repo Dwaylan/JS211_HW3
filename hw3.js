@@ -1,5 +1,7 @@
 'use strict';
 
+console.log("javascript is now loaded")
+
 // brings in the assert module for unit testing
 const assert = require('assert');
 // brings in the readline module to access the command line
@@ -23,6 +25,30 @@ output: process.stdout
 
 // just showed to check if a single letter is a vowel 
 // you can use 'aeiou'.includes(letter)
+
+// I've created two variables. One called "wordConvert" which calls the convert button
+// from the HTML and added an event listener. The second called "inputBox" which calls
+// the input box from the HTML
+let wordConvert = document.getElementById("wordConvert");
+wordConvert.addEventListener('click',function (){
+    console.log("the button was clicked");
+//  When the button is clicked the event listener will be triggered to log
+// "the button was clicked"
+    let theInputBox = document.getElementById("inputBox");
+    let item = theInputBox.value;
+    console.log("the input is", item);
+
+    let myList = document.getElementById("myList");
+// once again we are accessing an element from the DOM. this time we are accessing the list
+    let newList = document.createElement("li");
+// this creates and li element from the ether, hence ".createElement"
+    newList.innerText = item;
+// this is taking the item we submitted in the input box and holds it as an li
+    myList.appendChild(li);
+// this attaches the li element to the ul
+
+})
+
 
 const pigLatin = (word) => {
 // The function is "pigLatin"
